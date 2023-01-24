@@ -1,0 +1,83 @@
+﻿@model Content.Models.SeriesModel
+
+@{
+    ViewData["Title"] = "DetailsSeries";
+}
+
+<h1>Details for Series</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesOriginalName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesOriginalName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesDescription)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesDescription)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesRating)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesRating)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesSeasonCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesSeasonCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesEpisodeCount)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesEpisodeCount)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesLatestEpisode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesLatestEpisode)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesUrl)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesUrl)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesReleaseDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesReleaseDate)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.SeriesUpdateCycle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.SeriesUpdateCycle)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "EditSeries", new { id = Model.SeriesId }) |
+    <a asp-action="ListSeries">Back to List</a>
+</div>

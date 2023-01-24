@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="c48a41a6-8fab-47da-a2ed-4673ea1b4534" ChangeDateTime="01/05/2023 14:42:32">
+    <Property Name="ElementName" Value="[dbo].[SiteTable].[SiteDescription]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SiteTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SiteUrl" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="7d283064-c7da-4aa5-b112-4941b80f40da" ChangeDateTime="01/05/2023 14:53:03">
+    <Property Name="ElementName" Value="[dbo].[SeriesTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SeriesTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SeriesId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f4eddf1f-67c8-4e78-b4a4-b537cb22ccbc" ChangeDateTime="01/05/2023 15:10:14">
+    <Property Name="ElementName" Value="[dbo].[SiteTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SiteTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SiteId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="329139d9-39e3-4597-bfb3-7a0c0b49c7aa" ChangeDateTime="01/05/2023 15:15:51">
+    <Property Name="ElementName" Value="[dbo].[EpisodeTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[EpisodeTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="EpisodeId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="01a253ef-beef-4b13-88d7-e46a71a4cff4" ChangeDateTime="01/05/2023 15:20:34">
+    <Property Name="ElementName" Value="[dbo].[PersonTable].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PersonTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="PersonId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="8627049b-0286-4c99-be76-2b62b9dade08" ChangeDateTime="01/05/2023 15:41:54">
+    <Property Name="ElementName" Value="[dbo].[PersonToSeriesBridge].[Id]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[PersonToSeriesBridge]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="BridgeId" />
+  </Operation>
+</Operations>

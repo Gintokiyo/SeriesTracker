@@ -1,0 +1,82 @@
+﻿@model Content.Models.SeriesModel
+
+@{
+    ViewData["Title"] = "EditSeries";
+}
+
+<h1>Edit Series</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="EditSeries">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="SeriesId" class="control-label"></label>
+                <input asp-for="SeriesId" class="form-control" readonly/>
+                <span asp-validation-for="SeriesId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesName" class="control-label"></label>
+                <input asp-for="SeriesName" class="form-control" />
+                <span asp-validation-for="SeriesName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesOriginalName" class="control-label"></label>
+                <input asp-for="SeriesOriginalName" class="form-control" />
+                <span asp-validation-for="SeriesOriginalName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesDescription" class="control-label"></label>
+                <input asp-for="SeriesDescription" class="form-control" />
+                <span asp-validation-for="SeriesDescription" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesRating" class="control-label"></label>
+                <input asp-for="SeriesRating" class="form-control" />
+                <span asp-validation-for="SeriesRating" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesSeasonCount" class="control-label"></label>
+                <input asp-for="SeriesSeasonCount" class="form-control" />
+                <span asp-validation-for="SeriesSeasonCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesEpisodeCount" class="control-label"></label>
+                <input asp-for="SeriesEpisodeCount" class="form-control" />
+                <span asp-validation-for="SeriesEpisodeCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesLatestEpisode" class="control-label"></label>
+                <input asp-for="SeriesLatestEpisode" class="form-control" />
+                <span asp-validation-for="SeriesLatestEpisode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesUrl" class="control-label"></label>
+                <input asp-for="SeriesUrl" class="form-control" />
+                <span asp-validation-for="SeriesUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesReleaseDate" class="control-label"></label>
+                <input asp-for="SeriesReleaseDate" class="form-control" />
+                <span asp-validation-for="SeriesReleaseDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SeriesUpdateCycle" class="control-label"></label>
+                <input asp-for="SeriesUpdateCycle" class="form-control" />
+                <span asp-validation-for="SeriesUpdateCycle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="ListSeries">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
