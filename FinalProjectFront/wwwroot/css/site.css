@@ -16,3 +16,24 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#main-div-container {
+    margin-left: 20px;
+}
+
+table, th, td {
+    border: 1px solid;
+}
+
+#list-tables {
+    width: 100%;
+    text-align: center;
+}
+
+tr:hover {
+    background-color: silver;
+}
+
+#action-button:hover {
+    background-color: lightseagreen;
+}
