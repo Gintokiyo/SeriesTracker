@@ -78,5 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="FPDatabase.publish.xml" />
+    <None Include="FPDatabaseOnLaptop.publish.xml" />
   </ItemGroup>
 </Project>
