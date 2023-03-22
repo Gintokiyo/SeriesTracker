@@ -77,7 +77,7 @@
     <RefactorLog Include="FPDatabase.refactorlog" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="FPDatabase.publish.xml" />
     <None Include="FPDatabaseOnLaptop.publish.xml" />
+    <None Include="FPDatabase.publish.xml" />
   </ItemGroup>
 </Project>
