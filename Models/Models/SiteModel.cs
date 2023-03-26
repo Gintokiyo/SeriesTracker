@@ -13,6 +13,5 @@ namespace Content.Models
         public string? SiteUrl { get; set; }
         public string? SiteDescription { get; set; }
         public DateTime? SiteDateWhenAdded { get; set; }
-        public string? SiteAccount { get; set; }
     }
 }

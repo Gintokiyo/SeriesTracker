@@ -72,6 +72,21 @@
     <Build Include="dbo\Stored Procedures\spSeries_GetEntry.sql" />
     <Build Include="dbo\Stored Procedures\spSeries_InsertEntry.sql" />
     <Build Include="dbo\Stored Procedures\spSeries_UpdateEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spSite_InsertEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spSite_UpdateEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spSite_GetEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spSite_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\spSite_DeleteEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spEpisode_DeleteEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spEpisode_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\spEpisode_GetEnrty.sql" />
+    <Build Include="dbo\Stored Procedures\spEpisode_InsertEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spEpisode_UpdateEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spPerson_DeleteEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spPerson_GetAll.sql" />
+    <Build Include="dbo\Stored Procedures\spPerson_GetEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spPerson_InsertEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spPerson_UpdateEntry.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="FPDatabase.refactorlog" />

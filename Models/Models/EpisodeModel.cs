@@ -14,6 +14,7 @@ namespace Content.Models
         public double EpisodeRating { get; set; }
         public string? EpisodeUrl { get; set; }
         public string? EpisodeReleaseDate { get; set; }
+        public int EpisodeSeriesId { get; set; }
 
     }
 }
