@@ -9,30 +9,25 @@ namespace SeriesTrackerAPI.Controllers
     [Route("/SeriesTrackerAPIRoute")]
     public class TestingController : ControllerBase
     {
-        private PersonModel _person = new PersonModel 
-        {
-            PersonAge = 5,
-            PersonCountryOfOrigin = "Ro",
-            PersonId = 12,
-            PersonName = "Foo",
-        };
+        private readonly ISqlDataAccess _db;
+        private readonly ISeriesData _seriesData;
 
-        [HttpGet]
-        public PersonModel SeriesTrackerAPIGet()
-        {
-            return _person;
+        public TestingController(ISqlDataAccess db) 
+        { 
+            this._db = db;
+            this._seriesData = new SeriesData(this._db);
         }
 
-        [HttpPost]
-        public void SeriesTrackerAPIPost(PersonModel person)
+        [HttpGet]
+        public async Task<SeriesModel?> SeriesTrackerAPIGetAsync(int id)
         {
-            _person = person;
+            return await this._seriesData.GetSingleSeriesAsync(id);
         }
 
         [HttpPut]
-        public void SeriesTrackerAPIPut(PersonModel person)
+        public async void SeriesTrackerAPIPut(SeriesModel series)
         {
-            _person = person;
+            await this._seriesData.InsertSeriesAsync(series);
         }
     }
 }

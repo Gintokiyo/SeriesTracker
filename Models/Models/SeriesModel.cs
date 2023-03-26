@@ -14,9 +14,7 @@ namespace Content.Models
         public string? SeriesDescription { get; set; }
         public double SeriesRating { get; set; }
         public int SeriesSeasonCount { get; set; }
-        public List<PersonModel>? SeriesPerson { get; set; }
         public int SeriesEpisodeCount { get; set; }
-        public List<EpisodeModel>? SeriesEpisode { get; set; }
         public string? SeriesLatestEpisode { get; set; }
         public string? SeriesUrl { get; set; }
         public string? SeriesReleaseDate { get; set; }
