@@ -23,15 +23,23 @@ namespace SeriesTrackerAPI
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddSingleton<ISqlDataAccess, SqlDataAccess>();
-
             builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme)
                 .AddNegotiate();
-            
 
             builder.Services.AddAuthorization(options =>
             {
                 // By default, all incoming requests will be authorized according to the default policy.
                 options.FallbackPolicy = options.DefaultPolicy;
+            });
+
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", build =>
+                build
+                .AllowAnyHeader()
+                .AllowAnyMethod()
+                .AllowCredentials()
+                .WithOrigins("http://localhost:4200"));
             });
 
             var app = builder.Build();
@@ -46,7 +54,9 @@ namespace SeriesTrackerAPI
             app.UseHttpsRedirection();
 
             app.UseAuthentication();
+            app.UseCors("CorsPolicy");
             app.UseAuthorization();
+            
 
 
             app.MapControllers();

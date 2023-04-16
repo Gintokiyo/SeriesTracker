@@ -6,7 +6,6 @@ namespace SeriesTrackerAPI.Controllers
 {
     [Authorize]
     [ApiController]
-    [Route("/SiteRoute")]
     public class SiteController : ControllerBase
     {
         private readonly ISqlDataAccess _db;
@@ -19,15 +18,38 @@ namespace SeriesTrackerAPI.Controllers
         }
 
         [HttpGet]
+        [Route("/GetSingleSite")]
         public async Task<SiteModel?> SiteGetAsync(int id)
         {
             return await this._siteData.GetSingleSiteAsync(id);
         }
 
         [HttpPut]
+        [Route("/PutSingleSite")]
         public async void SitePutAsync(SiteModel site)
         {
             await this._siteData.InsertSiteAsync(site);
+        }
+
+        [HttpGet]
+        [Route("/GetAllSites")]
+        public async Task<IEnumerable<SiteModel>> SiteGetAllAsync()
+        {
+            return await this._siteData.GetSiteAsync();
+        }
+
+        [HttpDelete]
+        [Route("/DeleteSingleSite")]
+        public async void SiteDeleteAsync(int id)
+        {
+            await this._siteData.DeleteSiteAsync(id);
+        }
+
+        [HttpPut]
+        [Route("/UpdateSingleSite")]
+        public async void SiteUpdateAsync(SiteModel site)
+        {
+            await this._siteData.UpdateSiteAsync(site);
         }
     }
 }
