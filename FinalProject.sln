@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "FPDatabase", "FPDatabase\FPDatabase.sqlproj", "{035F4ABA-99A4-4ECB-BF8B-5D53C413B121}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SeriesTrackerAPI", "SeriesTrackerAPI\SeriesTrackerAPI.csproj", "{AA7B8B70-05E2-4B46-B992-92DB58B76DE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeriesTrackerAPI", "SeriesTrackerAPI\SeriesTrackerAPI.csproj", "{AA7B8B70-05E2-4B46-B992-92DB58B76DE4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalProjectFront", "FinalProjectFront\FinalProjectFront.csproj", "{64604090-9B04-4896-AFF4-18899D37171A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{AA7B8B70-05E2-4B46-B992-92DB58B76DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA7B8B70-05E2-4B46-B992-92DB58B76DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA7B8B70-05E2-4B46-B992-92DB58B76DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64604090-9B04-4896-AFF4-18899D37171A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64604090-9B04-4896-AFF4-18899D37171A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64604090-9B04-4896-AFF4-18899D37171A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64604090-9B04-4896-AFF4-18899D37171A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
