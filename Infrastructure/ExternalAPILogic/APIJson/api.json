@@ -1,6 +1,6 @@
 {
   "imdbApi": {
-    "key": "Insert API key here",
+    "key": "Insert API key here.",
     "enabled": true
   },
   //https://rapidapi.com/jakash1997/api/advanced-movie-search/
