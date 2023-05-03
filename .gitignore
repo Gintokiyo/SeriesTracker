@@ -362,3 +362,4 @@ MigrationBackup/
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
 /Infrastructure/ExternalAPILogic/APIJson/api.json
+/Infrastructure/ExternalAPILogic/APIJson/api.json
