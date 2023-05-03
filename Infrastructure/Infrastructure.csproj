@@ -17,4 +17,6 @@
     <ProjectReference Include="..\Models\Content.csproj" />
   </ItemGroup>
 
+  <ProjectExtensions><VisualStudio><UserProperties externalapilogic_4apijson_4api_1json__JsonSchema="" /></VisualStudio></ProjectExtensions>
+
 </Project>
