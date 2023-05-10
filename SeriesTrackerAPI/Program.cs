@@ -39,7 +39,7 @@ namespace SeriesTrackerAPI
                 .AllowAnyHeader()
                 .AllowAnyMethod()
                 .AllowCredentials()
-                .WithOrigins("http://localhost:4200"));
+                .WithOrigins("http://127.0.0.1:4200"));
             });
 
             var app = builder.Build();
