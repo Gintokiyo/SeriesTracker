@@ -41,9 +41,12 @@ namespace Infrastructure.DataLogic
                     series.SeriesSeasonCount,
                     series.SeriesEpisodeCount,
                     series.SeriesLatestEpisode,
-                    series.SeriesUrl,
+                    series.SeriesPosterUrl,
                     series.SeriesReleaseDate,
-                    series.SeriesUpdateCycle
+                    series.SeriesUpdateCycle,
+                    series.SeriesBackgroundUrl,
+                    series.SeriesOriginalLanguage,
+                    series.SeriesHomepage
                 });
 
         public Task UpdateSeriesAsync(SeriesModel series) =>
@@ -59,9 +62,12 @@ namespace Infrastructure.DataLogic
                     series.SeriesSeasonCount,
                     series.SeriesEpisodeCount,
                     series.SeriesLatestEpisode,
-                    series.SeriesUrl,
+                    series.SeriesPosterUrl,
                     series.SeriesReleaseDate,
-                    series.SeriesUpdateCycle
+                    series.SeriesUpdateCycle,
+                    series.SeriesBackgroundUrl,
+                    series.SeriesOriginalLanguage,
+                    series.SeriesHomepage
                 });
 
         public Task DeleteSeriesAsync(int id) =>

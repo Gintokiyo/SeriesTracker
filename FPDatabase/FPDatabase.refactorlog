@@ -42,4 +42,11 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="BridgeId" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="8875599b-191f-4782-9268-fb38c0365375" ChangeDateTime="06/05/2023 17:16:00">
+    <Property Name="ElementName" Value="[dbo].[SeriesTable].[SeriesUrl]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[SeriesTable]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="SeriesPosterURL" />
+  </Operation>
 </Operations>

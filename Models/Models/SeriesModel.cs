@@ -16,8 +16,11 @@ namespace Content.Models
         public int SeriesSeasonCount { get; set; }
         public int SeriesEpisodeCount { get; set; }
         public string? SeriesLatestEpisode { get; set; }
-        public string? SeriesUrl { get; set; }
-        public string? SeriesReleaseDate { get; set; }
+        public string? SeriesPosterUrl { get; set; }
+        public DateTime SeriesReleaseDate { get; set; }
         public int SeriesUpdateCycle { get; set; }
+        public string? SeriesBackgroundUrl { get; set; }
+        public string? SeriesOriginalLanguage { get; set; }
+        public string? SeriesHomepage { get; set; }
     }
 }

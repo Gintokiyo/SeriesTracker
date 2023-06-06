@@ -7,15 +7,19 @@
 	@SeriesSeasonCount int,
 	@SeriesEpisodeCount int,
 	@SeriesLatestEpisode nvarchar(50),
-	@SeriesUrl nvarchar(50),
-	@SeriesReleaseDate nvarchar(50),
-	@SeriesUpdateCycle int
+	@SeriesPosterUrl nvarchar(50),
+	@SeriesReleaseDate Date,
+	@SeriesUpdateCycle int,
+	@SeriesBackgroundUrl nvarchar(50),
+	@SeriesOriginalLanguage nvarchar(50),
+	@SeriesHomepage nvarchar(50)
 AS
 begin
 	UPDATE dbo.[SeriesTable]
 	set SeriesName = @SeriesName, SeriesOriginalName = @SeriesOriginalName, SeriesDescription = @SeriesDescription,
 		SeriesRating = @SeriesRating, SeriesSeasonCount = @SeriesSeasonCount, SeriesEpisodeCount = @SeriesEpisodeCount,
-		SeriesLatestEpisode = @SeriesLatestEpisode, SeriesUrl = @SeriesUrl, SeriesReleaseDate = @SeriesReleaseDate,
-		SeriesUpdateCycle = @SeriesUpdateCycle
+		SeriesLatestEpisode = @SeriesLatestEpisode, SeriesPosterUrl = @SeriesPosterUrl, SeriesReleaseDate = @SeriesReleaseDate,
+		SeriesUpdateCycle = @SeriesUpdateCycle, SeriesBackgroundUrl = @SeriesBackgroundUrl,
+		SeriesOriginalLanguage = @SeriesOriginalLanguage, SeriesHomepage = @SeriesHomepage
 		where SeriesId = @SeriesId
 end

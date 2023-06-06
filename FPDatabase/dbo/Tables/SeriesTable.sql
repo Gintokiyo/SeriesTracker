@@ -8,8 +8,11 @@
     [SeriesSeasonCount] INT NOT NULL DEFAULT 0, 
     [SeriesEpisodeCount] INT NOT NULL DEFAULT 0, 
     [SeriesLatestEpisode] NVARCHAR(50) NULL, 
-    [SeriesUrl] NVARCHAR(50) NULL, 
-    [SeriesReleaseDate] NVARCHAR(50) NULL, 
+    [SeriesPosterURL] NVARCHAR(50) NULL, 
+    [SeriesReleaseDate] DATE NULL, 
     [SeriesUpdateCycle] INT NOT NULL DEFAULT 0, 
+    [SeriesBackgroundURL] NVARCHAR(50) NULL, 
+    [SeriesOriginalLanguage] NVARCHAR(50) NULL, 
+    [SeriesHomepage] NVARCHAR(50) NULL, 
     PRIMARY KEY ([SeriesId]) 
 )

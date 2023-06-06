@@ -1,4 +1,4 @@
-﻿CREATE PROCEDURE [dbo].[spEpisode_GetEnrty]
+﻿CREATE PROCEDURE [dbo].[spEpisode_GetEntry]
 	@EpisodeId int
 AS
 begin
