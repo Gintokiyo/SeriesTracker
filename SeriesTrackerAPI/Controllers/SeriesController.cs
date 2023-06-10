@@ -25,9 +25,9 @@ namespace SeriesTrackerAPI.Controllers
             return await this._seriesData.GetSingleSeriesAsync(id);
         }
 
-        [HttpPut]
-        [Route("/PutSingleSeries")]
-        public async void SeriesPutAsync(SeriesModel series)
+        [HttpPost]
+        [Route("/PostSingleSeries")]
+        public async void SeriesPostAsync(SeriesModel series)
         {
             await this._seriesData.InsertSeriesAsync(series);
         }
