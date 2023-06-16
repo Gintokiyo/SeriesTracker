@@ -363,3 +363,6 @@ MigrationBackup/
 FodyWeavers.xsd
 /Infrastructure/ExternalAPILogic/APIJson/api.json
 /Infrastructure/ExternalAPILogic/APIJson/api.json
+
+# Configs
+appsettings.json
