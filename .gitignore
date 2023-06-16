@@ -365,4 +365,6 @@ FodyWeavers.xsd
 /Infrastructure/ExternalAPILogic/APIJson/api.json
 
 # Configs
-appsettings.json
+/SeriesTrackerAPI/appsettings.json
+/FPDatabase/FPDatabaseOnLaptop.publish.xml
+/FinalProjectFront/appsettings.json
