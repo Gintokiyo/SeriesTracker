@@ -9,5 +9,6 @@ namespace Infrastructure.DataLogic.Interface
         Task<SeriesModel?> GetSingleSeriesAsync(int id);
         Task InsertSeriesAsync(SeriesModel series);
         Task UpdateSeriesAsync(SeriesModel series);
+        Task<IEnumerable<SeriesModel>> GetPageSeriesAsync(int first);
     }
 }

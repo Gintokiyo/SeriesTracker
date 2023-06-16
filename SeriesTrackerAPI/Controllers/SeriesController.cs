@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Infrastructure.HelpFunctions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -37,6 +38,13 @@ namespace SeriesTrackerAPI.Controllers
         public async Task<IEnumerable<SeriesModel>> SeriesGetAllAsync()
         {
             return await this._seriesData.GetSeriesAsync();
+        }
+
+        [HttpGet]
+        [Route("/GetPageSeries")]
+        public async Task<IEnumerable<SeriesModel>> SeriesGetPageAsync(int page)
+        {
+            return await this._seriesData.GetPageSeriesAsync(HelpFunctions.FindFirstEntry(page));
         }
 
         [HttpDelete]

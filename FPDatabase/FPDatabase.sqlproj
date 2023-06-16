@@ -87,6 +87,7 @@
     <Build Include="dbo\Stored Procedures\spPerson_GetEntry.sql" />
     <Build Include="dbo\Stored Procedures\spPerson_InsertEntry.sql" />
     <Build Include="dbo\Stored Procedures\spPerson_UpdateEntry.sql" />
+    <Build Include="dbo\Stored Procedures\spSeries_GetPage.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="FPDatabase.refactorlog" />

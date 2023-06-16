@@ -74,5 +74,11 @@ namespace Infrastructure.DataLogic
             _db.SaveDataAsync(
                 "dbo.spSeries_DeleteEntry",
                 new { SeriesId = id });
+
+        public Task<IEnumerable<SeriesModel>> GetPageSeriesAsync(int firstEntry)
+        {
+            return _db.GetDataAsync<SeriesModel, dynamic>("dbo.spSeries_GetPage", new { first = firstEntry });
+        }
+
     }
 }
