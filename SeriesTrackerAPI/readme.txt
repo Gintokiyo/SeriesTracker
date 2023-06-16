@@ -9,6 +9,6 @@
   },
   "AllowedHosts": "*",
   "ConnectionStrings": {
-    "Default": ""
+    "Default": "Connection string Goes here"
   }
 }
