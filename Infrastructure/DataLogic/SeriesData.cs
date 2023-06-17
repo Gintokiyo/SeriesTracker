@@ -18,8 +18,8 @@ namespace Infrastructure.DataLogic
             this._db = db;
         }
 
-        public Task<IEnumerable<SeriesModel>> GetSeriesAsync() =>
-            _db.GetDataAsync<SeriesModel, dynamic>("dbo.spSeries_GetAll", new { });
+        public async Task<IEnumerable<SeriesModel>> GetSeriesAsync() =>
+            await _db.GetDataAsync<SeriesModel, dynamic>("dbo.spSeries_GetAll", new { });
 
         public async Task<SeriesModel?> GetSingleSeriesAsync(int id)
         {
@@ -29,8 +29,16 @@ namespace Infrastructure.DataLogic
             return results.FirstOrDefault();
         }
 
-        public Task InsertSeriesAsync(SeriesModel series) =>
-            _db.SaveDataAsync(
+        public async Task<SeriesModel?> GetByExIdAsync(int id)
+        {
+            var results = await _db.GetDataAsync<SeriesModel, dynamic>(
+                "dbo.spSeries_GetByExId",
+                new { externalId = id });
+            return results.FirstOrDefault();
+        }
+
+        public async Task InsertSeriesAsync(SeriesModel series) =>
+            await _db.SaveDataAsync(
                 "dbo.spSeries_InsertEntry",
                 new
                 {
@@ -46,11 +54,12 @@ namespace Infrastructure.DataLogic
                     series.SeriesUpdateCycle,
                     series.SeriesBackgroundUrl,
                     series.SeriesOriginalLanguage,
-                    series.SeriesHomepage
+                    series.SeriesHomepage,
+                    series.SeriesExternalId
                 });
 
-        public Task UpdateSeriesAsync(SeriesModel series) =>
-            _db.SaveDataAsync(
+        public async Task UpdateSeriesAsync(SeriesModel series) =>
+            await _db.SaveDataAsync(
                 "dbo.spSeries_UpdateEntry",
                 new
                 {
@@ -67,18 +76,19 @@ namespace Infrastructure.DataLogic
                     series.SeriesUpdateCycle,
                     series.SeriesBackgroundUrl,
                     series.SeriesOriginalLanguage,
-                    series.SeriesHomepage
+                    series.SeriesHomepage,
+                    series.SeriesExternalId
                 });
 
-        public Task DeleteSeriesAsync(int id) =>
-            _db.SaveDataAsync(
+        public async Task DeleteSeriesAsync(int id) =>
+            await _db.SaveDataAsync(
                 "dbo.spSeries_DeleteEntry",
                 new { SeriesId = id });
 
-        public Task<IEnumerable<SeriesModel>> GetPageSeriesAsync(int firstEntry)
-        {
-            return _db.GetDataAsync<SeriesModel, dynamic>("dbo.spSeries_GetPage", new { first = firstEntry });
-        }
+        public async Task<IEnumerable<SeriesModel>> GetPageSeriesAsync(int firstEntry)
+            => await _db.GetDataAsync<SeriesModel, dynamic>("dbo.spSeries_GetPage", new { first = firstEntry });
 
+        public async Task<IEnumerable<SeriesModel>> GetSearchSeriesAsync(string? searchTerm)
+            => await _db.GetDataAsync<SeriesModel, dynamic>("dbo.spSeries_GetByName", new { search = searchTerm });
     }
 }

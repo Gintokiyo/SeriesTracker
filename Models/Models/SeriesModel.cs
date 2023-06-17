@@ -22,5 +22,6 @@ namespace Content.Models
         public string? SeriesBackgroundUrl { get; set; }
         public string? SeriesOriginalLanguage { get; set; }
         public string? SeriesHomepage { get; set; }
+        public int SeriesExternalId { get; set; }
     }
 }

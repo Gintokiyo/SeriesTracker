@@ -14,5 +14,6 @@
     [SeriesBackgroundURL] NVARCHAR(50) NULL, 
     [SeriesOriginalLanguage] NVARCHAR(50) NULL, 
     [SeriesHomepage] NVARCHAR(50) NULL, 
+    [SeriesExternalId] INT NULL, 
     PRIMARY KEY ([SeriesId]) 
 )

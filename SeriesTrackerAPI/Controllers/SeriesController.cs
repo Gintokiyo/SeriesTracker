@@ -26,6 +26,13 @@ namespace SeriesTrackerAPI.Controllers
             return await this._seriesData.GetSingleSeriesAsync(id);
         }
 
+        [HttpGet]
+        [Route("/GetByExIdSeries")]
+        public async Task<SeriesModel?> SeriesGetByExIdAsync(int id)
+        {
+            return await this._seriesData.GetByExIdAsync(id);
+        }
+
         [HttpPost]
         [Route("/PostSingleSeries")]
         public async void SeriesPostAsync(SeriesModel series)
@@ -38,6 +45,13 @@ namespace SeriesTrackerAPI.Controllers
         public async Task<IEnumerable<SeriesModel>> SeriesGetAllAsync()
         {
             return await this._seriesData.GetSeriesAsync();
+        }
+
+        [HttpGet]
+        [Route("/GetSearchSeries")]
+        public async Task<IEnumerable<SeriesModel>> SeriesGetSearchAsync(string? search)
+        {
+            return await this._seriesData.GetSearchSeriesAsync(search);
         }
 
         [HttpGet]

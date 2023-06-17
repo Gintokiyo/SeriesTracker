@@ -7,14 +7,14 @@ WITH OrderedOrders AS
     SELECT [SeriesId], [SeriesName], [SeriesOriginalName], [SeriesDescription], [SeriesRating], 
 		   [SeriesSeasonCount], [SeriesEpisodeCount], [SeriesLatestEpisode], [SeriesPosterURL], 
 		   [SeriesReleaseDate], [SeriesUpdateCycle], [SeriesBackgroundURL], [SeriesOriginalLanguage], 
-		   [SeriesHomepage],  
+		   [SeriesHomepage], [SeriesExternalId],  
     ROW_NUMBER() OVER (ORDER BY [SeriesId]) AS RowNumber  
     FROM [dbo].SeriesTable   
 )   
 SELECT [SeriesId], [SeriesName], [SeriesOriginalName], [SeriesDescription], [SeriesRating], 
 	   [SeriesSeasonCount], [SeriesEpisodeCount], [SeriesLatestEpisode], [SeriesPosterURL], 
 	   [SeriesReleaseDate], [SeriesUpdateCycle], [SeriesBackgroundURL], [SeriesOriginalLanguage], 
-	   [SeriesHomepage], RowNumber    
+	   [SeriesHomepage], [SeriesExternalId], RowNumber    
 FROM OrderedOrders   
 WHERE RowNumber BETWEEN @first AND (@first + 19);
 RETURN 0

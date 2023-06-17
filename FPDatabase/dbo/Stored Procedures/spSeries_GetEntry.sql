@@ -5,7 +5,7 @@ begin
 	SELECT	[SeriesId], [SeriesName], [SeriesOriginalName], [SeriesDescription], [SeriesRating],
 			[SeriesSeasonCount], [SeriesEpisodeCount], [SeriesLatestEpisode], [SeriesPosterURL],
 			[SeriesReleaseDate], [SeriesUpdateCycle], [SeriesBackgroundURL], [SeriesOriginalLanguage],
-			[SeriesHomepage]
+			[SeriesHomepage], [SeriesExternalId]
 	from dbo.[SeriesTable]
 	where SeriesId = @SeriesId
 end

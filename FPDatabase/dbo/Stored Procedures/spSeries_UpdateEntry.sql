@@ -12,7 +12,8 @@
 	@SeriesUpdateCycle int,
 	@SeriesBackgroundUrl nvarchar(50),
 	@SeriesOriginalLanguage nvarchar(50),
-	@SeriesHomepage nvarchar(50)
+	@SeriesHomepage nvarchar(50),
+	@SeriesExternalId int
 AS
 begin
 	UPDATE dbo.[SeriesTable]
@@ -20,6 +21,6 @@ begin
 		SeriesRating = @SeriesRating, SeriesSeasonCount = @SeriesSeasonCount, SeriesEpisodeCount = @SeriesEpisodeCount,
 		SeriesLatestEpisode = @SeriesLatestEpisode, SeriesPosterUrl = @SeriesPosterUrl, SeriesReleaseDate = @SeriesReleaseDate,
 		SeriesUpdateCycle = @SeriesUpdateCycle, SeriesBackgroundUrl = @SeriesBackgroundUrl,
-		SeriesOriginalLanguage = @SeriesOriginalLanguage, SeriesHomepage = @SeriesHomepage
+		SeriesOriginalLanguage = @SeriesOriginalLanguage, SeriesHomepage = @SeriesHomepage, SeriesExternalId = @SeriesExternalId
 		where SeriesId = @SeriesId
 end

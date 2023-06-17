@@ -11,14 +11,15 @@
 	@SeriesUpdateCycle int,
 	@SeriesBackgroundUrl nvarchar(50),
 	@SeriesOriginalLanguage nvarchar(50),
-	@SeriesHomepage nvarchar(50)
+	@SeriesHomepage nvarchar(50),
+	@SeriesExternalId int
 AS
 begin
 	INSERT INTO dbo.[SeriesTable] (SeriesName, SeriesOriginalName, SeriesDescription, SeriesRating, 
 									SeriesSeasonCount, SeriesEpisodeCount, SeriesLatestEpisode, 
 									SeriesPosterUrl, SeriesReleaseDate, SeriesUpdateCycle,
-									SeriesBackgroundUrl, SeriesOriginalLanguage, SeriesHomepage)
+									SeriesBackgroundUrl, SeriesOriginalLanguage, SeriesHomepage, SeriesExternalId)
 	VALUES (@SeriesName, @SeriesOriginalName, @SeriesDescription, @SeriesRating, @SeriesSeasonCount,
 			@SeriesEpisodeCount, @SeriesLatestEpisode, @SeriesPosterUrl, @SeriesReleaseDate, @SeriesUpdateCycle,
-			@SeriesBackgroundUrl, @SeriesOriginalLanguage, @SeriesHomepage)
+			@SeriesBackgroundUrl, @SeriesOriginalLanguage, @SeriesHomepage, @SeriesExternalId)
 end

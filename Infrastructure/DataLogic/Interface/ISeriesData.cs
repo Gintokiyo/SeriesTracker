@@ -7,8 +7,10 @@ namespace Infrastructure.DataLogic.Interface
         Task DeleteSeriesAsync(int id);
         Task<IEnumerable<SeriesModel>> GetSeriesAsync();
         Task<SeriesModel?> GetSingleSeriesAsync(int id);
+        Task<SeriesModel?> GetByExIdAsync(int id);
         Task InsertSeriesAsync(SeriesModel series);
         Task UpdateSeriesAsync(SeriesModel series);
         Task<IEnumerable<SeriesModel>> GetPageSeriesAsync(int first);
+        Task<IEnumerable<SeriesModel>> GetSearchSeriesAsync(string? searchTerm);
     }
 }
